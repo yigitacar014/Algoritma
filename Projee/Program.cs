@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +11,71 @@ namespace Projee
     {
         static void Main(string[] args)
         {
-            
-           // HarfAynı();
+            // HarfAynı();
             //BuyukSayı();
             // YuzeYakın();
             //Karsılastırma();
             //YirmiİleOtuz();
             //Ytmetodu();
+            //zBulma();
+            // SonBasamakAynı();
+           // Tekrar();
 
             Console.ReadLine();
-//fsdafsadf
+
+        }
+
+        private static void Tekrar()
+        {
+            Console.Write("Lütfen bir Kelime Giriniz :");
+            string kelime = Console.ReadLine();
+            Console.Write("Lütfen kaç kere yazacağınızı söyleyin :");
+            int secenek = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < secenek; i++)
+            {
+                Console.Write(kelime);
+
+            }
+        }
+
+        private static void SonBasamakAynı()
+        {
+            Console.Write("Lütfen bir sayı giriniz :");
+            int sayi = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Lütfen bir sayı giriniz :");
+            int sayi1 = Convert.ToInt32(Console.ReadLine());
+            string metinecevir = sayi.ToString();
+            string metinecivo = sayi1.ToString();
+            if (sayi > 0 && sayi1 > 0 && metinecevir[metinecevir.Length - 1] == metinecivo[metinecivo.Length - 1])
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+        }
+
+        private static void zBulma()
+        {
+            Console.Write("Lütfen bir kelime  giriniz :");
+            string word = Console.ReadLine();
+            int asd = 0;
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[i] == 'z')
+                {
+                    asd++;
+                }
+            }
+            if (asd > 1 && asd <= 4)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
         }
 
         private static void Ytmetodu()
